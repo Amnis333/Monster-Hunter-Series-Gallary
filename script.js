@@ -42,14 +42,14 @@ let targetDiv = document.getElementById("target");
 
 //ボタン・出力結果・シリーズ情報を囲うdiv
 let rightSideDiv = document.createElement("div");
-rightSide.classList.add("col-4","d-flex","justify-content-center","align-items-center");
+rightSideDiv.classList.add("col-4","d-flex","justify-content-center","align-items-center");
 
 //ボタンを作るdiv
 let btnDiv = document.createElement("div");
 btnDiv.classList.add("col-11", "d-flex", "flex-wrap");
 //数字（0-9）のボタン
 for (let i = 0; i <= 9; i++){
-    let currentBtn = docume.createElement("button");
+    let currentBtn = document.createElement("button");
     currentBtn.classList.add("btn","m-2");
     currentBtn.innerHTML = i.toString();
     btnDiv.append(currentBtn);
@@ -79,3 +79,4 @@ let seriesInfoDiv = document.createElement("div");
 // })
 
 targetDiv.append(rightSideDiv);
+console.log(targetDiv);
