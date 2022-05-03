@@ -54,6 +54,19 @@ for (let i = 0; i <= 9; i++){
     currentBtn.innerHTML = i.toString();
     btnDiv.append(currentBtn);
 }
+//Clearボタン
+let clearBtn = document.createElement("button");
+clearBtn.classList.add("btn","m-2");
+clearBtn.innerHTML = "Clear";
+btnDiv.append(clearBtn);
+
+//Enterボタン
+let enterBtn = document.createElement("button");
+enterBtn.classList.add("btn","m-2");
+enterBtn.innerHTML = "Enter";
+btnDiv.append(enterBtn);
+
+rightSideDiv.append(btnDiv);
 
 //ボタンの出力結果を作るdiv
 let pushedNumber = document.createElement("div");
@@ -64,3 +77,5 @@ let seriesInfoDiv = document.createElement("div");
 // seriesInfoTxt.addEventListener("click",function(){
 
 // })
+
+targetDiv.append(rightSideDiv);
