@@ -40,22 +40,27 @@ let targetDiv = document.getElementById("target");
 //1.とりあえず0から9までのボタン+クリア/エンターボタンを作る（1列4個）
 //2.押した番号を表示する欄（電卓でいう答えの部分）を作る
 
-//ボタンとシリーズ情報を囲うdiv
+//ボタン・出力結果・シリーズ情報を囲うdiv
 let rightSideDiv = document.createElement("div");
 rightSide.classList.add("col-4","d-flex","justify-content-center","align-items-center");
+
+//ボタンを作るdiv
+let btnDiv = document.createElement("div");
+btnDiv.classList.add("col-11", "d-flex", "flex-wrap");
+//数字（0-9）のボタン
+for (let i = 0; i <= 9; i++){
+    let currentBtn = docume.createElement("button");
+    currentBtn.classList.add("btn","m-2");
+    currentBtn.innerHTML = i.toString();
+    btnDiv.append(currentBtn);
+}
+
+//ボタンの出力結果を作るdiv
+let pushedNumber = document.createElement("div");
+
 //シリーズ情報を囲うdiv
 let seriesInfoDiv = document.createElement("div");
 // let seriesInfoTxt = document.createElement("h3");
 // seriesInfoTxt.addEventListener("click",function(){
 
 // })
-//ボタンを作るdiv
-let btnDiv = document.createElement("div");
-btnDiv.classList.add("col-11", "d-flex", "flex-wrap");
-//ボタンの出力結果を作るdiv
-let pushedNumber = document.createElement("div");
-for (let i = 0; )
-//(1)数字ボタンを押す
-//(2)出力結果が表示される
-//(3)Enterボタンを押すとその番号のシリーズ情報（+画像）が出る
-
