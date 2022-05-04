@@ -50,9 +50,9 @@ btnDiv.classList.add("bg-dark" ,"flex-wrap","d-flex","justify-content-center")
 
 //ボタンの出力結果を作るdiv
 let pushedNum = document.createElement("div");
-pushedNum.classList.add("bg-white","m-2");
+pushedNum.classList.add("bg-danger","justify-content-center","d-flex");
 pushedNum.id = "output";
-//pushedNum.innerHTML = idInput;
+pushedNum.innerHTML = "input number :";
 rightSideDiv.append(pushedNum);
 
 //数字（0-9）のボタン
@@ -66,8 +66,7 @@ for (let i = 1; i <= 10; i++){
     }
     
     currentBtn.addEventListener("click",function(){
-        let idInput = document.getElementById("output");
-        idInput.value += i.toString();
+       pushedNum.innerHTML += i.toString();
     })
     btnDiv.append(currentBtn);
 }
@@ -78,8 +77,7 @@ let clearBtn = document.createElement("button");
 clearBtn.classList.add("btn","m-2","bg-white","col-3");
 clearBtn.innerHTML = "Clear";
 clearBtn.addEventListener("click",function(){
-    let idInput = document.getElementById("output");
-    idInput.value = "";
+    pushedNum.innerHTML = "input number :";
 })
 btnDiv.append(clearBtn);
 
