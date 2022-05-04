@@ -52,21 +52,22 @@ btnDiv.classList.add("bg-dark" ,"flex-wrap","d-flex","justify-content-center")
 let pushedNum = document.createElement("div");
 pushedNum.classList.add("bg-danger","justify-content-center","d-flex");
 pushedNum.id = "output";
-pushedNum.innerHTML = "input number :";
+pushedNum.innerHTML = "";
 rightSideDiv.append(pushedNum);
 
 //数字（0-9）のボタン
-for (let i = 1; i <= 10; i++){
+for (let i = 0; i <= 9; i++){
     let currentBtn = document.createElement("button");
     currentBtn.classList.add("btn","bg-white","m-2","col-3");
-    if (i === 10){
-        currentBtn.innerHTML = "0";
-    }else{
-        currentBtn.innerHTML = i.toString();
-    }
+    
+    
+    currentBtn.innerHTML = i.toString();
+    
     
     currentBtn.addEventListener("click",function(){
        pushedNum.innerHTML += i.toString();
+       enterBtn.classList.remove("bg-white");
+       enterBtn.classList.add("bg-danger");
     })
     btnDiv.append(currentBtn);
 }
@@ -77,7 +78,9 @@ let clearBtn = document.createElement("button");
 clearBtn.classList.add("btn","m-2","bg-white","col-3");
 clearBtn.innerHTML = "Clear";
 clearBtn.addEventListener("click",function(){
-    pushedNum.innerHTML = "input number :";
+    pushedNum.innerHTML = "";
+    enterBtn.classList.remove("bg-danger");
+    enterBtn.classList.add("bg-white");
 })
 btnDiv.append(clearBtn);
 
