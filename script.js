@@ -1,8 +1,8 @@
-//Monster Hunter Series Gallery
-//歴代メインシリーズを載せる(全17シリーズ)
-//左側と右側にわける
-//左側は画像を表示＋slider
-//右側はボタンを設置+ボタンを押すと発売日と売上本数が表示される
+// //Monster Hunter Series Gallery
+// //歴代メインシリーズを載せる(全17シリーズ)
+// //左側と右側にわける
+// //左側は画像を表示＋slider
+// //右側はボタンを設置+ボタンを押すと発売日と売上本数が表示される
 class SeriesInfo{
     constructor(imgId,title,releaseDate,unitsSold,imgUrl){
         this.imgId = imgId;
@@ -42,41 +42,62 @@ let targetDiv = document.getElementById("target");
 
 //ボタン・出力結果・シリーズ情報を囲うdiv
 let rightSideDiv = document.createElement("div");
-rightSideDiv.classList.add("col-4","d-flex","justify-content-center","align-items-center");
+rightSideDiv.classList.add("col-5");
 
 //ボタンを作るdiv
 let btnDiv = document.createElement("div");
-btnDiv.classList.add("col-11", "d-flex", "flex-wrap");
+btnDiv.classList.add("bg-dark" ,"flex-wrap","d-flex","justify-content-center")
+
+//ボタンの出力結果を作るdiv
+let pushedNum = document.createElement("div");
+pushedNum.classList.add("bg-white","m-2");
+pushedNum.id = "output";
+//pushedNum.innerHTML = idInput;
+rightSideDiv.append(pushedNum);
+
 //数字（0-9）のボタン
-for (let i = 0; i <= 9; i++){
+for (let i = 1; i <= 10; i++){
     let currentBtn = document.createElement("button");
-    currentBtn.classList.add("btn","m-2");
-    currentBtn.innerHTML = i.toString();
+    currentBtn.classList.add("btn","bg-white","m-2","col-3");
+    if (i === 10){
+        currentBtn.innerHTML = "0";
+    }else{
+        currentBtn.innerHTML = i.toString();
+    }
+    
+    currentBtn.addEventListener("click",function(){
+        let idInput = document.getElementById("output");
+        idInput.value += i.toString();
+    })
     btnDiv.append(currentBtn);
 }
-//Clearボタン
+
+// rightSideDiv.append(btnDiv);
+// //Clearボタン
 let clearBtn = document.createElement("button");
-clearBtn.classList.add("btn","m-2");
+clearBtn.classList.add("btn","m-2","bg-white","col-3");
 clearBtn.innerHTML = "Clear";
+clearBtn.addEventListener("click",function(){
+    let idInput = document.getElementById("output");
+    idInput.value = "";
+})
 btnDiv.append(clearBtn);
 
-//Enterボタン
+// //Enterボタン
 let enterBtn = document.createElement("button");
-enterBtn.classList.add("btn","m-2");
+enterBtn.classList.add("btn","m-2","bg-white","col-3");
 enterBtn.innerHTML = "Enter";
 btnDiv.append(enterBtn);
 
 rightSideDiv.append(btnDiv);
 
-//ボタンの出力結果を作るdiv
-let pushedNumber = document.createElement("div");
 
-//シリーズ情報を囲うdiv
-let seriesInfoDiv = document.createElement("div");
-// let seriesInfoTxt = document.createElement("h3");
-// seriesInfoTxt.addEventListener("click",function(){
+// //シリーズ情報を囲うdiv
+// let seriesInfoDiv = document.createElement("div");
+// // let seriesInfoTxt = document.createElement("h3");
+// // seriesInfoTxt.addEventListener("click",function(){
 
-// })
+// // })
 
 targetDiv.append(rightSideDiv);
-console.log(targetDiv);
+// console.log(targetDiv);
