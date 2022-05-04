@@ -11,6 +11,10 @@ class SeriesInfo{
         this.unitsSold = unitsSold;
         this.imgUrl = imgUrl;
     }
+
+    showProfile(){
+        return this.title + ",\n" + this.releaseDate +"発売," + "\n"+"売上本数"+this.unitsSold;
+    }
 }
 
 
@@ -42,7 +46,9 @@ let targetDiv = document.getElementById("target");
 
 //ボタン・出力結果・シリーズ情報を囲うdiv
 let rightSideDiv = document.createElement("div");
-rightSideDiv.classList.add("col-5");
+rightSideDiv.classList.add("col-6","bg-warning","vh95");
+
+let seriesDiv = document.createElement("div");
 
 //ボタンを作るdiv
 let btnDiv = document.createElement("div");
@@ -52,6 +58,7 @@ btnDiv.classList.add("bg-dark" ,"flex-wrap","d-flex","justify-content-center")
 let pushedNum = document.createElement("div");
 pushedNum.classList.add("bg-danger","justify-content-center","d-flex");
 pushedNum.id = "output";
+//pushedNum.value = "";
 pushedNum.innerHTML = "";
 rightSideDiv.append(pushedNum);
 
@@ -72,33 +79,42 @@ for (let i = 0; i <= 9; i++){
     btnDiv.append(currentBtn);
 }
 
-// rightSideDiv.append(btnDiv);
-// //Clearボタン
-let clearBtn = document.createElement("button");
-clearBtn.classList.add("btn","m-2","bg-white","col-3");
-clearBtn.innerHTML = "Clear";
-clearBtn.addEventListener("click",function(){
-    pushedNum.innerHTML = "";
-    enterBtn.classList.remove("bg-danger");
-    enterBtn.classList.add("bg-white");
-})
-btnDiv.append(clearBtn);
+
 
 // //Enterボタン
 let enterBtn = document.createElement("button");
 enterBtn.classList.add("btn","m-2","bg-white","col-3");
 enterBtn.innerHTML = "Enter";
 btnDiv.append(enterBtn);
-
+enterBtn.addEventListener("click",function(){
+    let seriesDiv = document.createElement("div");
+    
+    if (parseInt(pushedNum.innerHTML) >= seriesList.length){
+        alert(`0から${(seriesList.length-1).toString()}までの値を入力してください`);
+    }else{
+        seriesDiv.innerHTML = seriesList[parseInt(pushedNum.innerHTML)].showProfile();
+    }
+    rightSideDiv.append(seriesDiv);    
+})
 rightSideDiv.append(btnDiv);
 
 
-// //シリーズ情報を囲うdiv
-// let seriesInfoDiv = document.createElement("div");
-// // let seriesInfoTxt = document.createElement("h3");
-// // seriesInfoTxt.addEventListener("click",function(){
+// //Clearボタン
+let clearBtn = document.createElement("button");
+clearBtn.classList.add("btn","m-2","bg-white","col-3");
+clearBtn.innerHTML = "Clear";
+clearBtn.addEventListener("click",function(){
+    pushedNum.innerHTML = "";
+    //pushedNum.value = "";
+    enterBtn.classList.remove("bg-danger");
+    enterBtn.classList.add("bg-white");
+    seriesDiv.remove();
+    
+})
+btnDiv.append(clearBtn);
 
-// // })
+
+//console.log(seriesList[parseInt("2")].showProfile());
 
 targetDiv.append(rightSideDiv);
 // console.log(targetDiv);
