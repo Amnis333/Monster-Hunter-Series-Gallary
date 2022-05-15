@@ -13,7 +13,7 @@ class SeriesInfo{
     }
 
     showProfile(){
-        return this.title + ",\n" + this.releaseDate +"発売," + "\n"+"売上本数"+this.unitsSold;
+        return this.title + `<br>` +"発売日：" + this.releaseDate +`<br>`+"売上本数："+this.unitsSold;
     }
 }
 
@@ -40,13 +40,38 @@ const seriesList = [
 
 
 let targetDiv = document.getElementById("target");
-//右側の開発
-//1.とりあえず0から9までのボタン+クリア/エンターボタンを作る（1列4個）
-//2.押した番号を表示する欄（電卓でいう答えの部分）を作る
+
+
+//slider部分の開発
+let sliderShow = document.createElement("div");
+sliderShow.classList.add("col-12", "d-flex", "flex-nowrap", "overflow-hiddens");
+let main = document.createElement("div");
+main.classList.add("main","full-width");
+main.setAttribute("data-index","0");
+let extra = document.createElement("div");
+extra.classList.add("extra","full-width");
+
+main.append(seriesList[0].imgUrl);
+sliderShow.append(main);
+sliderShow.append(extra);
+
+function sliderJump(animationType){
+    let index = parseInt(main.getAttribute("data-index"));
+    let currentItem = seriesList[index];
+    index = parseInt(pushedNum.innerHTML);
+    let nextItem = seriesList[index];
+}
+
+
+
+
+
+
+
 
 //ボタン・出力結果・シリーズ情報を囲うdiv
 let rightSideDiv = document.createElement("div");
-rightSideDiv.classList.add("col-6","bg-warning","vh95");
+rightSideDiv.classList.add("col-12","bg-warning","vh95");
 
 let seriesDiv = document.createElement("div");
 
@@ -86,6 +111,7 @@ let enterBtn = document.createElement("button");
 enterBtn.classList.add("btn","m-2","bg-white","col-3");
 enterBtn.innerHTML = "Enter";
 btnDiv.append(enterBtn);
+
 enterBtn.addEventListener("click",function(){
     let seriesDiv = document.createElement("div");
     
@@ -94,21 +120,24 @@ enterBtn.addEventListener("click",function(){
     }else{
         seriesDiv.innerHTML = seriesList[parseInt(pushedNum.innerHTML)].showProfile();
     }
-    rightSideDiv.append(seriesDiv);    
+    
+    rightSideDiv.append(seriesDiv);
+        
 })
 rightSideDiv.append(btnDiv);
 
 
-// //Clearボタン
+//Clearボタン
 let clearBtn = document.createElement("button");
 clearBtn.classList.add("btn","m-2","bg-white","col-3");
 clearBtn.innerHTML = "Clear";
 clearBtn.addEventListener("click",function(){
+    seriesDiv.innerHTML = "";
     pushedNum.innerHTML = "";
-    //pushedNum.value = "";
+    
     enterBtn.classList.remove("bg-danger");
     enterBtn.classList.add("bg-white");
-    seriesDiv.remove();
+    
     
 })
 btnDiv.append(clearBtn);
@@ -118,3 +147,6 @@ btnDiv.append(clearBtn);
 
 targetDiv.append(rightSideDiv);
 // console.log(targetDiv);
+
+//Clearを押してもseriesDiv.innerHTMLが初期化されない問題
+//seriesDivを画像divの中に入れてしまう？
