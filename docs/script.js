@@ -14,23 +14,23 @@ class SeriesInfo{
 
 
 const seriesList = [
-    new SeriesInfo(0,"モンスターハンター","2004/3/11","28万8559本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallary/master/images/MH.jpg"),
-    new SeriesInfo(1,"モンスターハンターG","2005/1/20","約30万本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallary/master/images/MHG.jpg"),
-    new SeriesInfo(2,"モンスターハンターポータブル","2005/12/1","112万2064本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallary/master/images/MHP.jpg"),
-    new SeriesInfo(3,"モンスターハンター2","2006/2/16","69万2228本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallary/master/images/MH2.jpg"),
-    new SeriesInfo(4,"モンスターハンターポータブル2nd","2007/2/22","172万3187本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallary/master/images/MHP2.jpg"),
-    new SeriesInfo(5,"モンスターハンターポータブル2ndG","2008/3/27","422万6265本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallary/master/images/MHP2G.jpg"),
-    new SeriesInfo(6,"モンスターハンター3","2009/8/1","約115万本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallary/master/images/MH3.jpg"),
-    new SeriesInfo(7,"モンスターハンターポータブル3rd","2010/12/1","487万3552本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallary/master/images/MHP3.jpg"),
-    new SeriesInfo(8,"モンスターハンター3G","2011/12/10","194万1106本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallary/master/images/MH3G.jpg"),
-    new SeriesInfo(9,"モンスターハンター4","2013/9/14","359万1334本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallary/master/images/MH4.jpg"),
-    new SeriesInfo(10,"モンスターハンター4G","2014/10/11","261万7803本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallary/master/images/MH4G.jpg"),
-    new SeriesInfo(11,"モンスターハンタークロス","2015/11/28","283万2833本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallary/master/images/MHX.jpg"),
-    new SeriesInfo(12,"モンスターハンターダブルクロス","2017/3/18","169万8161本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallary/master/images/MHX.jpg"),
-    new SeriesInfo(13,"モンスターハンター：ワールド","2018/1/26","約340万本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallary/master/images/MHW.jpg"),
-    new SeriesInfo(14,"モンスターハンターワールド：アイスボーン","2019/9/6","164万本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallary/master/images/MHWI.jpg"),
-    new SeriesInfo(15,"モンスターハンターライズ","2021/3/26","235万693本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallary/master/images/MHRise.jpg"),
-    new SeriesInfo(16,"モンスターハンターライズ：サンブレイク","2022/6/30","No data","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallary/master/images/MHRiseSunBreak.jpg")
+    new SeriesInfo(0,"モンスターハンター","2004/3/11","28万8559本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallary/master/docs/images/MH.jpg"),
+    new SeriesInfo(1,"モンスターハンターG","2005/1/20","約30万本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallary/master/docs/images/MHG.jpg"),
+    new SeriesInfo(2,"モンスターハンターポータブル","2005/12/1","112万2064本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallary/master/docs/images/MHP.jpg"),
+    new SeriesInfo(3,"モンスターハンター2","2006/2/16","69万2228本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallary/master/docs/images/MH2.jpg"),
+    new SeriesInfo(4,"モンスターハンターポータブル2nd","2007/2/22","172万3187本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallary/master/docs/images/MHP2.jpg"),
+    new SeriesInfo(5,"モンスターハンターポータブル2ndG","2008/3/27","422万6265本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallary/master/docs/images/MHP2G.jpg"),
+    new SeriesInfo(6,"モンスターハンター3","2009/8/1","約115万本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallary/master/docs/images/MH3.jpg"),
+    new SeriesInfo(7,"モンスターハンターポータブル3rd","2010/12/1","487万3552本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallary/master/docs/images/MHP3.jpg"),
+    new SeriesInfo(8,"モンスターハンター3G","2011/12/10","194万1106本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallary/master/docs/images/MH3G.jpg"),
+    new SeriesInfo(9,"モンスターハンター4","2013/9/14","359万1334本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallary/master/docs/images/MH4.jpg"),
+    new SeriesInfo(10,"モンスターハンター4G","2014/10/11","261万7803本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallary/master/docs/images/MH4G.jpg"),
+    new SeriesInfo(11,"モンスターハンタークロス","2015/11/28","283万2833本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallary/master/docs/images/MHX.jpg"),
+    new SeriesInfo(12,"モンスターハンターダブルクロス","2017/3/18","169万8161本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallary/master/docs/images/MHX.jpg"),
+    new SeriesInfo(13,"モンスターハンター：ワールド","2018/1/26","約340万本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallary/master/docs/images/MHW.jpg"),
+    new SeriesInfo(14,"モンスターハンターワールド：アイスボーン","2019/9/6","164万本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallary/master/docs/images/MHWI.jpg"),
+    new SeriesInfo(15,"モンスターハンターライズ","2021/3/26","235万693本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallary/master/docs/images/MHRise.jpg"),
+    new SeriesInfo(16,"モンスターハンターライズ：サンブレイク","2022/6/30","No data","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallary/master/docs/images/MHRiseSunBreak.jpg")
 ]
 
 
