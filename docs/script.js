@@ -45,7 +45,7 @@ main.classList.add("main","full-width","d-flex","justify-content-center");
 main.setAttribute("data-index","0");
 
 let mainImg = document.createElement("img");
-mainImg.classList.add("img-size","mb-5");
+mainImg.classList.add("img-size");
 main.append(mainImg);
 
 
