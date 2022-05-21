@@ -57,8 +57,7 @@ let extraImg = document.createElement("img");
 extraImg.classList.add("img-size");
 extra.append(extraImg);
 
-console.log(main);
-console.log(extra);
+
 
 sliderShow.append(main);
 sliderShow.append(extra);
@@ -89,8 +88,7 @@ function animateMain(currentImage,nextImage){
     main.classList.add("expand-animation");
     extra.classList.add("deplete-animation");
 
-    console.log(main);
-    console.log(extra);
+    
 
 
     if(nextImage - currentImage >= 0) {
