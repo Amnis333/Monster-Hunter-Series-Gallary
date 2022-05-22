@@ -93,17 +93,17 @@ function animateMain(currentImage,nextImage){
     
 
 
-    if(nextImage - currentImage >= 0) {
+    if(nextImage.imgId - currentImage.imgId > 0) {
+            sliderShow.innerHTML = "";
+            sliderShow.append(main);
+            sliderShow.append(extra);
+        }else {
             sliderShow.innerHTML = "";
             sliderShow.append(extra);
             sliderShow.append(main);
         }
 
-    else {
-        sliderShow.innerHTML = "";
-        sliderShow.append(main);
-        sliderShow.append(extra);
-    }
+    
 
 }
 
@@ -116,23 +116,31 @@ leftSideDiv.classList.add("col-12","col-md-5","mx-md-5");
 //タイトルを囲うdiv
 let titleH2 = document.createElement("h2");
 titleH2.innerHTML = "Monster Hunter Series Gallary !";
-titleH2.classList.add("my-1");
+titleH2.classList.add("d-flex","justify-content-center","p-2");
 leftSideDiv.append(titleH2);
-//操作方法を補足説明
-let manualH5 = document.createElement("h5");
-manualH5.classList.add("my-3");
+
+//ManualとMenuを囲うdiv
+let manualAndMenuDiv = document.createElement("div");
+manualAndMenuDiv.classList.add("row","col-12","mx-1");
+leftSideDiv.append(manualAndMenuDiv);
+
+//Manual
+let manualH5 = document.createElement("h6");
+manualH5.classList.add("col-6","d-flex","justify-content-center");
 manualH5.innerHTML = "Manual(Click here !)";
 manualH5.addEventListener("click",function(){
     alert(`1.番号を入力する(Clearでリセット)\n2.Enterを入力する\n3.歴代シリーズのパッケージが登場！`);
 })
-leftSideDiv.append(manualH5);
-//対応番号とシリーズを補足説明
-let menuH5 = document.createElement("h5");
+manualAndMenuDiv.append(manualH5);
+
+//Menu
+let menuH5 = document.createElement("h6");
+menuH5.classList.add("col-6","d-flex","justify-content-center");
 menuH5.innerHTML = "Menu(Click here !)";
 menuH5.addEventListener("click",function(){
     alert(`0:MH 1:MHG 2:MHP 3:MH2 4:MHP2\n5:MHP2G 6:MH3 7:MHP3 8:MH3G 9:MH4\n10:MH4G 11:MHX 12:MHXX 13:MHW`);
 })
-leftSideDiv.append(menuH5);
+manualAndMenuDiv.append(menuH5);
 
 //ボタン・出力結果・シリーズ情報を囲うdiv
 let vendingDiv = document.createElement("div");
@@ -145,7 +153,7 @@ vendingDiv.append(calculatorDiv);
 
 //シリーズ情報を囲うdiv
 let seriesDiv = document.createElement("div");
-
+seriesDiv.classList.add("d-md-flex","justify-content-center","p-md-5","p-4","fw-bold")
 //ボタンを作るdiv
 let btnDiv = document.createElement("div");
 btnDiv.classList.add("bg-dark" ,"flex-wrap","d-flex","justify-content-center");
