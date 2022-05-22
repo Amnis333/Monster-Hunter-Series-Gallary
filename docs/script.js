@@ -115,7 +115,7 @@ leftSideDiv.classList.add("col-12","col-md-5","mx-md-5");
 
 //タイトルを囲うdiv
 let titleH2 = document.createElement("h2");
-titleH2.innerHTML = "Monster Hunter Series Gallary !";
+titleH2.innerHTML = "Monster Hunter Series Gallery !";
 titleH2.classList.add("d-flex","justify-content-center","p-2");
 leftSideDiv.append(titleH2);
 
