@@ -116,15 +116,21 @@ leftSideDiv.classList.add("col-12","col-md-5","mx-md-5");
 //タイトルを囲うdiv
 let titleH2 = document.createElement("h2");
 titleH2.innerHTML = "Monster Hunter Series Gallary !";
-titleH2.classList.add("my-md-1");
+titleH2.classList.add("my-1");
 leftSideDiv.append(titleH2);
-let titleDetailH4 = document.createElement("h5");
-titleDetailH4.innerHTML = "手順<br>(1)番号を入力する(Clearでリセット)<br>(2)Enterを入力する<br>(3)歴代シリーズのパッケージが登場！";
-leftSideDiv.append(titleDetailH4);
+let manualH5 = document.createElement("h5");
+manualH5.innerHTML = "Manual(Click here !)";
+manualH5.addEventListener("click",function(){
+    alert(`1.番号を入力する(Clearでリセット)\n2.Enterを入力する\n3.歴代シリーズのパッケージが登場！`);
+})
+leftSideDiv.append(manualH5);
 
-let menuP = document.createElement("p");
-menuP.innerHTML = "対応番号<br>0:MH 1:MHG 2:MHP 3:MH2 4:MHP2<br> 5:MHP2G 6:MH3 7:MHP3 8:MH3G 9:MH4<br> 10:MH4G 11:MHX 12:MHXX 13:MHW";
-leftSideDiv.append(menuP);
+let menuH5 = document.createElement("h5");
+menuH5.innerHTML = "Menu(Click here !)";
+menuH5.addEventListener("click",function(){
+    alert(`0:MH 1:MHG 2:MHP 3:MH2 4:MHP2\n5:MHP2G 6:MH3 7:MHP3 8:MH3G 9:MH4\n10:MH4G 11:MHX 12:MHXX 13:MHW`);
+})
+leftSideDiv.append(menuH5);
 
 //ボタン・出力結果・シリーズ情報を囲うdiv
 let vendingDiv = document.createElement("div");
