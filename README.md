@@ -20,4 +20,4 @@ prevボタンとnextボタンの実装。毎回clearボタンを押すのが煩�
 
 # URL
 以下のURLから見ることができます。
-https://amnis333.github.io/Monster-Hunter-Series-Gallary/
+https://amnis333.github.io/Monster-Hunter-Series-Gallery/
