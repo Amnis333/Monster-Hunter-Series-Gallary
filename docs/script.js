@@ -118,13 +118,15 @@ let titleH2 = document.createElement("h2");
 titleH2.innerHTML = "Monster Hunter Series Gallary !";
 titleH2.classList.add("my-1");
 leftSideDiv.append(titleH2);
+//操作方法を補足説明
 let manualH5 = document.createElement("h5");
+manualH5.classList.add("my-3");
 manualH5.innerHTML = "Manual(Click here !)";
 manualH5.addEventListener("click",function(){
     alert(`1.番号を入力する(Clearでリセット)\n2.Enterを入力する\n3.歴代シリーズのパッケージが登場！`);
 })
 leftSideDiv.append(manualH5);
-
+//対応番号とシリーズを補足説明
 let menuH5 = document.createElement("h5");
 menuH5.innerHTML = "Menu(Click here !)";
 menuH5.addEventListener("click",function(){
