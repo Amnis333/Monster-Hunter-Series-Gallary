@@ -34,18 +34,20 @@ const seriesList = [
 
 
 let targetDiv = document.getElementById("target");
+targetDiv.classList.add("row");
 
 
 //slider部分の開発
 let sliderShow = document.createElement("div");
-sliderShow.classList.add("col-12", "d-flex", "flex-nowrap", "overflow-hiddens");
+sliderShow.classList.add("col-12","d-flex", "flex-nowrap", "overflow-hiddens","col-md-5");
 
 let main = document.createElement("div");
 main.classList.add("main","full-width","d-flex","justify-content-center");
 main.setAttribute("data-index","0");
 
 let mainImg = document.createElement("img");
-mainImg.classList.add("img-size");
+mainImg.classList.add("img-fluid");
+mainImg.setAttribute("alt","Responsive image");
 main.append(mainImg);
 
 
@@ -53,7 +55,8 @@ let extra = document.createElement("div");
 extra.classList.add("extra","full-width");
 
 let extraImg = document.createElement("img");
-extraImg.classList.add("img-size");
+extraImg.classList.add("img-fluid");
+extraImg.setAttribute("alt","Responsive image");
 extra.append(extraImg);
 
 
@@ -106,13 +109,33 @@ function animateMain(currentImage,nextImage){
 
 
 
+//画像以外の全てを囲うdiv
+let leftSideDiv = document.createElement("div");
+leftSideDiv.classList.add("col-12","col-md-5","mx-md-5");
 
+//タイトルを囲うdiv
+let titleH2 = document.createElement("h2");
+titleH2.innerHTML = "Monster Hunter Series Gallary !";
+titleH2.classList.add("my-md-1");
+leftSideDiv.append(titleH2);
+let titleDetailH4 = document.createElement("h5");
+titleDetailH4.innerHTML = "手順<br>(1)番号を入力する(Clearでリセット)<br>(2)Enterを入力する<br>(3)歴代シリーズのパッケージが登場！";
+leftSideDiv.append(titleDetailH4);
 
+let menuP = document.createElement("p");
+menuP.innerHTML = "対応番号<br>0:MH 1:MHG 2:MHP 3:MH2 4:MHP2<br> 5:MHP2G 6:MH3 7:MHP3 8:MH3G 9:MH4<br> 10:MH4G 11:MHX 12:MHXX 13:MHW";
+leftSideDiv.append(menuP);
 
 //ボタン・出力結果・シリーズ情報を囲うdiv
-let rightSideDiv = document.createElement("div");
-rightSideDiv.classList.add("col-12");
+let vendingDiv = document.createElement("div");
+vendingDiv.classList.add("mt-md-5");
 
+//ボタンと出力結果を囲うdiv
+let calculatorDiv = document.createElement("div");
+calculatorDiv.classList.add("mt-md-5");
+vendingDiv.append(calculatorDiv);
+
+//シリーズ情報を囲うdiv
 let seriesDiv = document.createElement("div");
 
 //ボタンを作るdiv
@@ -124,7 +147,7 @@ let pushedNum = document.createElement("div");
 pushedNum.classList.add("bg-danger","justify-content-center","d-flex");
 pushedNum.id = "output";
 pushedNum.innerHTML = "";
-rightSideDiv.append(pushedNum);
+calculatorDiv.append(pushedNum);
 
 //数字（0-9）のボタン
 for (let i = 0; i <= 9; i++){
@@ -159,13 +182,13 @@ enterBtn.addEventListener("click",function(){
         seriesDiv.innerHTML = seriesList[parseInt(pushedNum.innerHTML)].showProfile();
     }
     
-    rightSideDiv.append(seriesDiv);
+    calculatorDiv.append(seriesDiv);
     let currentIndex = parseInt(main.getAttribute("data-index"));
     let nextIndex = parseInt(pushedNum.innerHTML);
     slideJump(nextIndex-currentIndex);
         
 })
-rightSideDiv.append(btnDiv);
+calculatorDiv.append(btnDiv);
 
 
 //Clearボタン
@@ -183,7 +206,7 @@ clearBtn.addEventListener("click",function(){
 })
 btnDiv.append(clearBtn);
 
+leftSideDiv.append(vendingDiv);
 
-
-targetDiv.append(rightSideDiv);
+targetDiv.append(leftSideDiv);
 targetDiv.append(sliderShow);
