@@ -1,4 +1,4 @@
-# Monster Hunter Series Gallary
+# Monster Hunter Series Gallery
 ボタンを押すと歴代のモンスターハンターシリーズが表示されるアプリです。
 
 各作品のパッケージ画像とともに作品名・発売日・売上本数が表示されます。
