@@ -95,12 +95,12 @@ function animateMain(currentImage,nextImage){
 
     if(nextImage.imgId - currentImage.imgId > 0) {
             sliderShow.innerHTML = "";
-            sliderShow.append(main);
             sliderShow.append(extra);
+            sliderShow.append(main);
         }else {
             sliderShow.innerHTML = "";
-            sliderShow.append(extra);
             sliderShow.append(main);
+            sliderShow.append(extra);
         }
 
     
