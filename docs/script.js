@@ -138,7 +138,7 @@ let menuH5 = document.createElement("h6");
 menuH5.classList.add("col-6","d-flex","justify-content-center");
 menuH5.innerHTML = "Menu(Click here !)";
 menuH5.addEventListener("click",function(){
-    alert(`0:MH 1:MHG 2:MHP 3:MH2 4:MHP2\n5:MHP2G 6:MH3 7:MHP3 8:MH3G 9:MH4\n10:MH4G 11:MHX 12:MHXX 13:MHW`);
+    alert(`0:MH 1:MHG 2:MHP 3:MH2\n4:MHP2 5:MHP2G 6:MH3 7:MHP3\n8:MH3G 9:MH4 10:MH4G 11:MHX\n12:MHXX 13:MHW 14:MHWI 15:MHRise`);
 })
 manualAndMenuDiv.append(menuH5);
 
