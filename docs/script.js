@@ -28,8 +28,8 @@ const seriesList = [
     new SeriesInfo(11,"モンスターハンタークロス","2015/11/28","283万2833本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallery/master/docs/images/mhx_visual.jpg"),
     new SeriesInfo(12,"モンスターハンターダブルクロス","2017/3/18","169万8161本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallery/master/docs/images/mhxx_visual.jpg"),
     new SeriesInfo(13,"モンスターハンター：ワールド","2018/1/26","約340万本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallery/master/docs/images/mhw_visual.jpg"),
-    //new SeriesInfo(14,"モンスターハンターワールド：アイスボーン","2019/9/6","164万本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallery/master/docs/images/mhwi_visual.jpg"),
-    //new SeriesInfo(15,"モンスターハンターライズ","2021/3/26","235万693本","https://raw.githubusercontent.com/Amnis333/Monster-Hunter-Series-Gallery/master/docs/images/mhrise_visual.jpg")
+    new SeriesInfo(14,"モンスターハンターワールド：アイスボーン","2019/9/6","164万本","https://www.capcom.co.jp/monsterhunter/world-iceborne/ps4/assets/img/common/top/monster_bg.jpg"),
+    new SeriesInfo(15,"モンスターハンターライズ","2021/3/26","235万693本","https://www.capcom.co.jp/monsterhunter/rise/assets/images/mv-am.jpg")
 ]
 
 
